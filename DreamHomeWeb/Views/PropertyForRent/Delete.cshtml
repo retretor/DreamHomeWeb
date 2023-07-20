@@ -1,0 +1,83 @@
+﻿@model DreamHomeWeb.Models.Domain.PropertyForRent
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Property</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rooms)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rooms)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PropertyOwnerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PropertyOwnerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OverseerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OverseerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BranchId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BranchId)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id"/>
+        <input type="submit" value="Delete" class="btn btn-danger"/> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+
+</div>

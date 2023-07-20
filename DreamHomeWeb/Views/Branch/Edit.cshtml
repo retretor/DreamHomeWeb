@@ -1,0 +1,33 @@
+﻿@model DreamHomeWeb.Models.Domain.Branch
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label asp-for="Street">Street:</label>
+        <input asp-for="Street" class="form-control" />
+        <span asp-validation-for="Street" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City">City:</label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PostCode">Post Code:</label>
+        <input asp-for="PostCode" class="form-control" />
+        <span asp-validation-for="PostCode" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Back to List</a>
+}

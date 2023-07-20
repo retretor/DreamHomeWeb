@@ -1,0 +1,75 @@
+﻿@model DreamHomeWeb.Models.Domain.Lease
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Branch</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PropertyId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PropertyId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Deposit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Deposit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paid)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+    </dl>
+</div>
+<a asp-action="Index">Back to List</a>

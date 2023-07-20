@@ -1,0 +1,45 @@
+﻿@model DreamHomeWeb.Models.Domain.Client
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label asp-for="FirstName">First Name:</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName">Last Name:</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber">Phone number:</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="PrefType">Type:</label>
+        <input asp-for="PrefType" class="form-control" />
+        <span asp-validation-for="PrefType" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="MaxRent">Max rent:</label>
+        <input asp-for="MaxRent" class="form-control" />
+        <span asp-validation-for="MaxRent" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Back to List</a>
+}

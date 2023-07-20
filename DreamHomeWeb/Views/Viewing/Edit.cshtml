@@ -1,0 +1,33 @@
+﻿@model DreamHomeWeb.Models.Domain.Viewing
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label asp-for="PropertyId">Property Id:</label>
+        <input asp-for="PropertyId" class="form-control" />
+        <span asp-validation-for="PropertyId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ClientId">Client Id:</label>
+        <input asp-for="ClientId" class="form-control" />
+        <span asp-validation-for="ClientId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ViewDate">View Date:</label>
+        <input asp-for="ViewDate" class="form-control" />
+        <span asp-validation-for="ViewDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Back to List</a>
+}

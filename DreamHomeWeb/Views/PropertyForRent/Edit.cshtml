@@ -1,0 +1,69 @@
+﻿@model DreamHomeWeb.Models.Domain.PropertyForRent
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label asp-for="City">City:</label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Street">Street:</label>
+        <input asp-for="Street" class="form-control" />
+        <span asp-validation-for="Street" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PostCode">Post Code:</label>
+        <input asp-for="PostCode" class="form-control" />
+        <span asp-validation-for="PostCode" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Type">Type:</label>
+        <input asp-for="Type" class="form-control" />
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Rooms">Rooms:</label>
+        <input asp-for="Rooms" class="form-control" />
+        <span asp-validation-for="Rooms" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Rent">Rent:</label>
+        <input asp-for="Rent" class="form-control" />
+        <span asp-validation-for="Rent" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="PropertyOwnerId">Owner Id:</label>
+        <input asp-for="PropertyOwnerId" class="form-control" />
+        <span asp-validation-for="PropertyOwnerId" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="OverseerId">Overseer Id:</label>
+        <input asp-for="OverseerId" class="form-control" />
+        <span asp-validation-for="OverseerId" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="BranchId">Branch Id:</label>
+        <input asp-for="BranchId" class="form-control" />
+        <span asp-validation-for="BranchId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Back to List</a>
+}

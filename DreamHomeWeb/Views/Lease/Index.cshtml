@@ -1,0 +1,93 @@
+﻿@model DreamHomeWeb.Models.DomainModel
+@{
+    ViewData["Title"] = "Leases";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].PropertyId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].ClientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].Rent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].PaymentMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].Deposit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].Paid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Leases[0].Duration)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model.Leases)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deposit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

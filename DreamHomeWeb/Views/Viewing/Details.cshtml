@@ -1,0 +1,39 @@
+﻿@model DreamHomeWeb.Models.Domain.Viewing
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Viewing</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PropertyId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PropertyId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ViewDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ViewDate)
+        </dd>
+    </dl>
+</div>
+<a asp-action="Index">Back to List</a>

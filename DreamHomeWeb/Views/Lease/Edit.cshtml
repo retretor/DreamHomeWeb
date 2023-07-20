@@ -1,0 +1,69 @@
+﻿@model DreamHomeWeb.Models.Domain.Lease
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+            <label asp-for="PropertyId">Property Id:</label>
+            <input asp-for="PropertyId" class="form-control" />
+            <span asp-validation-for="PropertyId" class="text-danger"></span>
+        </div>
+    
+        <div class="form-group">
+            <label asp-for="ClientId">Client Id:</label>
+            <input asp-for="ClientId" class="form-control" />
+            <span asp-validation-for="ClientId" class="text-danger"></span>
+        </div>
+    
+        <div class="form-group">
+            <label asp-for="Rent">Rent:</label>
+            <input asp-for="Rent" class="form-control" />
+            <span asp-validation-for="Rent" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="PaymentMethod">Payment method:</label>
+            <input asp-for="PaymentMethod" class="form-control" />
+            <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Deposit">Deposit:</label>
+            <input asp-for="Deposit" class="form-control" />
+            <span asp-validation-for="Deposit" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Paid">Paid:</label>
+            <input asp-for="Paid" class="form-control" />
+            <span asp-validation-for="Paid" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="StartDate">Start date:</label>
+            <input asp-for="StartDate" class="form-control" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="EndDate">End date:</label>
+            <input asp-for="EndDate" class="form-control" />
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Duration">Duration:</label>
+            <input asp-for="Duration" class="form-control" />
+            <span asp-validation-for="Duration" class="text-danger"></span>
+        </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Back to List</a>
+}

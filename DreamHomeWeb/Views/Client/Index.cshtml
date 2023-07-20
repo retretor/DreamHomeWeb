@@ -1,0 +1,70 @@
+﻿@model DreamHomeWeb.Models.DomainModel
+
+@{
+    ViewData["Title"] = "Clients";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients[0].FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients[0].LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients[0].MaxRent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients[0].PrefType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients[0].PhoneNumber)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model.Clients)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.MaxRent)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PrefType)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PhoneNumber)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
